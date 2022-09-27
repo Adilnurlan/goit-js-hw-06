@@ -3,16 +3,18 @@ const counterValueId = document.querySelector("#value");
 const btnDecrement = document.querySelector('button[data-action="decrement"]');
 const btnIncrement = document.querySelector('button[data-action="increment"]');
 
+let counterValue = 0;
+
 btnIncrement.addEventListener("click", (event) => {
-  const newValue = +counterValueId.textContent + 1;
-  counterValueId.innerHTML = newValue;
+  counterValue = +counterValueId.textContent + 1;
+  counterValueId.innerHTML = counterValue;
 });
 
 btnDecrement.addEventListener("click", (event) => {
-  const newValue = +counterValueId.textContent - 1;
-  if (newValue < 0) {
+  counterValue = +counterValueId.textContent - 1;
+  if (counterValue < 0) {
     return;
-  } else counterValueId.innerHTML = newValue;
+  } else counterValueId.innerHTML = counterValue;
 });
 
 

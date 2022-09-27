@@ -14,8 +14,8 @@ const ul = document.querySelector("#ingredients");
 const markup = (ingredient) => {
   const li = document.createElement('li');
   li.classList.add('item');
-  li.append(ingredient);
-  // li.textContent = ingredient;
+  // li.append(ingredient);
+  li.textContent = ingredient;
   return li;
 };
 
